@@ -8,4 +8,6 @@ public class Constant {
 
     public static int PERMISSIONS_REQUESTCODE = 10;
     public static int PERMISSIONS_OPEN_BLUETOOTH = 10;
+
+    public static final String BLUETOOTH_RECEIVE_PATH = "/.blt/bltreceive";
 }

@@ -105,7 +105,9 @@ public class DeviceConnectionFragment extends BaseFragment<DeviceView,DevicePres
                 DialogUtils.dismissDial();
                 BluetoothDevice device = intent.getParcelableExtra(BluetoothDevice.EXTRA_DEVICE);
                 Log.e("Test",device.getName());
-                presenter.updateBlueToothList(device.getName());
+                presenter.updateBlueToothList(device);
+            }else if(BluetoothDevice.ACTION_BOND_STATE_CHANGED.equals(action)){
+
             }
         }
     };
@@ -127,11 +129,19 @@ public class DeviceConnectionFragment extends BaseFragment<DeviceView,DevicePres
     }
 
     @Override
-    public void updateBlueToothList(String deviceName) {
+    public void updateBlueToothList(final BluetoothDevice device) {
         TextView tv_deviceName = new TextView(getActivity());
         tv_deviceName.setPadding(10,10,0,10);
-        tv_deviceName.setText(deviceName);
+        tv_deviceName.setText(device.getName());
         lv_deviceContainer.addView(tv_deviceName);
+        tv_deviceName.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                presenter.connectDevice(device);
+                //receive data
+                presenter.dataReceive();
+            }
+        });
     }
 
     // Bluetooth Permission handle -->android 6.0

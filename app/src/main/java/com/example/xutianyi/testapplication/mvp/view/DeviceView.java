@@ -1,5 +1,7 @@
 package com.example.xutianyi.testapplication.mvp.view;
 
+import android.bluetooth.BluetoothDevice;
+
 import com.example.xutianyi.testapplication.mvp.presenter.MvpPresenter;
 
 import java.util.List;
@@ -10,5 +12,5 @@ import java.util.List;
 
 public interface DeviceView extends MvpView {
 
-    void updateBlueToothList(String deviceName);
+    void updateBlueToothList(BluetoothDevice device);
 }
