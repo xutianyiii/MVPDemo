@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">TestApplication</string>
+    <string name="fg_media_title">多媒体娱乐</string>
+    <string name="fg_device_title">设备连接</string>
+    <string name="fg_message_title">消息发布</string>
+    <string name="bluetooth_switch">蓝牙开关</string>
+    <string name="bluetooth_device">设备列表:</string>
+    <string name="bluetooth_disable">你蓝牙不可用！</string>
+    <string name="bluetooth_waiting">搜索蓝牙设备中...</string>
+    <string name="bluetooth_must_allow">必须允许开启蓝牙权限！</string>
+    <string name="yes">确定</string>
+    <string name="no">取消</string>
+</resources>
