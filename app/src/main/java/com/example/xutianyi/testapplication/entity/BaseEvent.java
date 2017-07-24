@@ -6,4 +6,5 @@ package com.example.xutianyi.testapplication.entity;
  */
 
 public class BaseEvent {
+    //
 }
